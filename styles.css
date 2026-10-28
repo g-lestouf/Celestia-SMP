@@ -15,3 +15,38 @@ footer{padding:26px max(4vw,calc((100vw - var(--max))/2));display:grid;grid-temp
 @media(max-width:780px){.topbar{min-height:70px;padding:8px 5%}.brand img{width:115px}.menu-toggle{display:block;margin-left:auto}.nav{display:none;position:absolute;top:70px;left:0;right:0;padding:12px 5% 20px;background:#090a12;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}.nav.open{display:flex}.nav a{padding:10px 0;font-size:.9rem;border:0}.hero{min-height:680px;padding:65px 6% 85px;align-items:flex-start}.hero:after{background:linear-gradient(90deg,#090a12f5,#090a12b8),linear-gradient(0deg,#090a12,transparent 50%)}.hero-logo{width:100%;height:55%;right:-12%;top:38%;opacity:.42}.hero h1{font-size:clamp(3.3rem,14vw,4.8rem);letter-spacing:-2px}.quick-facts{gap:14px}.section{padding:65px 6%}.section-heading{grid-template-columns:1fr;gap:15px}.cards,.rules-grid{grid-template-columns:1fr}.join{grid-template-columns:1fr;padding:65px 6%}.join-art{min-height:250px}.vote{grid-template-columns:52px 1fr;gap:16px;padding:65px 6%}.vote-symbol{width:50px;height:50px}.vote .btn,.vote .note{grid-column:2;justify-self:start}.vote .note{margin:-10px 0 0}.contact{margin:0 6% 50px;padding:26px;grid-template-columns:1fr}.contact h2{font-size:2rem}.contact .note{grid-column:1}footer{grid-template-columns:1fr auto;padding:25px 6%}footer p{grid-column:1/-1;grid-row:2}footer small{grid-row:3}}
 @media(max-width:420px){.hero-actions{flex-direction:column}.hero-actions .btn{width:100%}.quick-facts{flex-direction:column}.feature-list article{grid-template-columns:43px 1fr;gap:12px}.feature-list article>span{width:40px;height:40px}.feature-list article>b{display:none}.ip-box{align-items:flex-start;flex-direction:column}.ip-box button{width:100%}.vote{grid-template-columns:1fr}.vote .btn,.vote .note{grid-column:1}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+
+/* Texte des paragraphes : taille adaptative */
+p {
+  font-size: clamp(1rem, 0.9rem + 0.35vw, 1.2rem);
+  line-height: 1.8;
+}
+
+/* Descriptions dans les cartes */
+.card p,
+.feature-list p,
+.rules-grid p {
+  font-size: clamp(1rem, 0.9rem + 0.3vw, 1.15rem);
+  line-height: 1.8;
+}
+
+/* Texte descriptif de l'accueil */
+.hero-content > .muted,
+.lead {
+  font-size: clamp(1.05rem, 0.95rem + 0.4vw, 1.25rem);
+  line-height: 1.8;
+}
+
+/* Texte descriptif des autres sections */
+.section-heading > p,
+.intro,
+.join .muted,
+.vote .muted,
+.contact .muted {
+  font-size: clamp(1rem, 0.9rem + 0.35vw, 1.2rem);
+  line-height: 1.8;
+}
+
+
+
